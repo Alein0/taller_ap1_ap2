@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive, 'Courier New', Courier, monospace;
+}
+header{
+    text-align: center;
+    background-color: #06dca3;
+}
+.tabla{
+    border-collapse: collapse;
+}
+.tab{
+    display: inline-block;
+    margin: 2%;
+}
+table tr th{
+   border-radius: 10px;
+   background-color: #06d5dc;
+   width: 100px;
+   height: 25px;
+}
+form{
+    text-align: center;
+}
+.formabtn{
+    border-radius: 10px;
+    background-color: #06d5dc;
+    width: 100px;
+    height: 25px;
+}
