@@ -12,27 +12,29 @@
         <h1>Gestor de Tareas</h1>
     </header>
 
-    <form>
+    <form onsubmit="event.preventDefault();enviar();" autocomplete="off">
     <div class="tab">
-        <table class="tabla">
+        <table class="tabla" id="tabla">
             <thead>
                 <tr>
                     <th>Titulo</th> 
                     <th>Descripción</th>
-                    <th>Opciones</th>
+                    <th>Opciones</th>    
                     <th>Estado</th>
                 </tr>
             </thead>
+            <tbody>
+      
+            </tbody>
         </table>
     </div>
     <div>
-        <label for="titulo">Titulo:</label><input type="text" id="titulo" placeholder="Ingrese el titulo de la tarea"></input> 
-        <label for="info">Descripción:</label><textarea type="text" id="info" placeholder="Ingrese descripcion de la tarea"></textarea>
+        <label for="titulo">Titulo:</label><input type="text" id="titulo" placeholder="Ingrese el titulo de la tarea" required></input> 
+        <label for="info">Descripción:</label><textarea type="text" id="info" placeholder="Ingrese descripcion de la tarea" required></textarea>
     </div> 
     </br>
-    <button type="submit" class="formabtn">Añadir</button>  
+    <input type="submit" class="formabtn" value="Añadir">
     </form>
-   
- 
 </body>
+<script type="text/javascript" src="JS/ap1.js"></script>
 </html>
