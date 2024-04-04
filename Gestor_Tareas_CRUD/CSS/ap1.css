@@ -22,10 +22,10 @@ header{
     margin: 2%;
 }
 table tr th{
-   border-radius: 10px;
+    border: 1px solid #c5cdcd;
    background-color: #06d5dc;
-   width: 100px;
-   height: 25px;
+   width: 160px;
+   height: 30px;
 }
 section{
     text-align: center;
