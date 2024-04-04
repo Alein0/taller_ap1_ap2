@@ -3,9 +3,16 @@
     padding: 0px;
     font-family: cursive, 'Courier New', Courier, monospace;
 }
+body{
+    background-image: url("../img/fondo.png");
+    background-size: 100%;
+    background-position: 12%;
+}
 header{
+    padding: 1px;
     text-align: center;
-    background-color: #06dca3;
+    background-color: #06d5dc;
+    font-size:25px;
 }
 .tabla{
     border-collapse: collapse;
@@ -20,13 +27,50 @@ table tr th{
    width: 100px;
    height: 25px;
 }
-form{
+section{
     text-align: center;
 }
-.formabtn{
-    color: black;
-    border-radius: 10px;
+article{
+    background-color: #30015c;
+    padding: 30px;
+}
+aside{
+    display: block;
+    padding: 30px;
+    overflow: hidden;
+    text-align: center;
+    position: fixed;
+    width: 10%;
+    background-color:  #06d5dc;
+    margin-top: 19vh;
+    
+    margin-left: 2%;
+   
+    border-radius: 20px;
+    box-shadow: inset 5px 0 5px -5px  #06d5dc;
+}
+.footer{
+    text-align: center;
+    height: 40px;
     background-color: #06d5dc;
-    width: 100px;
-    height: 25px;
+    padding: 15px;
+  }
+  
+.margen{
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 20px;
+}
+.main{
+ 
+    padding: 15px;
+    text-align: center;
+}
+html,body{
+    height: 100%;
+}
+.wrapper{
+    min-height: 100%;
+    display: grid;
+   grid-template-rows: auto 1fr ;
 }
