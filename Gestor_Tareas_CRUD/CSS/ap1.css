@@ -11,7 +11,7 @@ body{
 header{
     padding: 1px;
     text-align: center;
-    background-color: #06d5dc;
+    background-color: #06b8dc;
     font-size:25px;
 }
 .tabla{
@@ -23,16 +23,12 @@ header{
 }
 table tr th{
     border: 1px solid #c5cdcd;
-   background-color: #06d5dc;
+   background-color: #06b8dc;
    width: 160px;
    height: 30px;
 }
 section{
     text-align: center;
-}
-article{
-    background-color: #30015c;
-    padding: 30px;
 }
 aside{
     display: block;
@@ -40,19 +36,17 @@ aside{
     overflow: hidden;
     text-align: center;
     position: fixed;
-    width: 10%;
-    background-color:  #06d5dc;
-    margin-top: 19vh;
-    
-    margin-left: 2%;
-   
+    width: 20%;
+    background-color:  #06b8dc;
+    margin-top: 15vh;
+    margin-left: 3%;
     border-radius: 20px;
-    box-shadow: inset 5px 0 5px -5px  #06d5dc;
+    box-shadow: inset 5px 0 5px -5px  #06b8dc;
 }
 .footer{
     text-align: center;
     height: 40px;
-    background-color: #06d5dc;
+    background-color: #06b8dc;
     padding: 15px;
   }
   

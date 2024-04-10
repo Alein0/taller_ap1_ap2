@@ -47,6 +47,7 @@ function Borr(td) {
     }
 }
 function Estado(){
+
         const marca = document.getElementById("marca")
         marca.innerHTML = 'Completado';
 }
