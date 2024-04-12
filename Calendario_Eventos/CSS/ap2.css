@@ -1,0 +1,15 @@
+.ejemplo{
+    width: 126px;
+    height: 190px;
+    margin-block: 10px;
+    margin-inline: 15px;
+    padding: 16px;
+    border: 1px solid #000;
+}
+.orden{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
