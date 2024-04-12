@@ -16,11 +16,13 @@ function Leer() {
 }
 function InsertarDatos(data) {
     let table = document.getElementById("tabla").getElementsByTagName('tbody')[0]
+    const num = table.getElementsByTagName('tr').length
+    console.log(num)
     let Fila = table.insertRow(table.length)
     columna1 = Fila.insertCell(0).innerHTML = data.titulo
     columna2 = Fila.insertCell(1).innerHTML = data.info
     columna3 = Fila.insertCell(2).innerHTML = '<input type=button class="formabtn" onClick="Edit(this)" value="Editar"><button class="formabtn" onClick="Borr(this)">Borrar</button>'
-    columna4 = Fila.insertCell(3).innerHTML = '<button class="formabtn" onClick="Estado()" id=marca>Sin Completar</button>'
+    columna4 = Fila.insertCell(3).innerHTML = '<button class="formabtn" onClick="Estado('+num+')" id="marca'+num+'">Sin Completar</button>'
     document.getElementById("titulo")
     Vaciar()
 }
@@ -46,8 +48,7 @@ function Borr(td) {
         Vaciar()
     }
 }
-function Estado(){
-
-        const marca = document.getElementById("marca")
+function Estado(index){
+        const marca = document.getElementById("marca"+index)
         marca.innerHTML = 'Completado';
 }
