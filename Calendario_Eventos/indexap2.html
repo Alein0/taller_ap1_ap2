@@ -13,6 +13,7 @@
     </header>
     <form id="idcalen" name="calen">
         <label>Mes:</label>
+
             <select name="mess" id="mes">
                 <option>------</option>
                 <option value="1">Enero</option>
@@ -28,23 +29,18 @@
                 <option value="11">Noviembre</option>
                 <option value="12">Diciembre</option>
             </select>
-		<label>Eventos:</label><input type="text" id="evento" placeholder="Ingrese el evento" required></input> 
 
-            <div>
                 <label>Evento: </label><input type="text" name="evento" placeholder="Ingrese un evento" required></input> 
-                <br>
                 <label>Dia: </label><input type="number" name="dia" placeholder="Eliga el dia" required></input> 
                 <br>
-                <input type="submit" value="Guardar">
-                <input type=button value="Editar">
-                <button>Borrar</button>
-            </div>
+                <input class="estiloboton" type="submit" value="Guardar">
+                <input class="estiloboton"  type=button value="Editar">
+                <button class="estiloboton" >Borrar</button>
+        
     </form>
     <section id="resultados" class="orden"></section>
     <script src="JS/ap2.js"></script>
     <h2 id="fecha"></h2>
-    <h1>Enero</h1>
-
 <br>
 <br>
 </body>

@@ -30,8 +30,8 @@ function generarDias(mes) {
 
     console.log(dias);
     document.getElementById('resultados').innerHTML = dias.map((value) => {
-      return '<div class="ejemplo">' + value + '</div>';
-    }).join('');
+      return '<div class="celdas">' + value + '</div>';
+    }).join(" ");
 }
 
 document.getElementById('idcalen').addEventListener('submit', (event) => {

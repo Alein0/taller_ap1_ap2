@@ -2,7 +2,14 @@
     margin: 0px;
     padding: 0px;
     font-family: cursive, 'Courier New', Courier, monospace;
+	
 }
+.estiloboton {
+
+	
+	font-family: "Poppins", serif;
+}
+
 body {
 	display: flex;
 	flex-flow: column;
@@ -34,14 +41,21 @@ header{
 	 border: 1px solid rgba(78, 48, 229, 0.18);
     font-size:25px;
 }
-ul {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	flex-wrap: wrap;
-	list-style: none;
-}
-	li {
-		display: flex;
+
+
+    .footer{
+     text-align: center;
+     height: 100px;
+	 background: rgba(57, 39, 255, 0.25);
+	 box-shadow: 0 8px 32px 0 rgba(31, 39, 143, 0.37);
+	 border-radius: 10px;
+	 border: 1px solid rgba(78, 48, 229, 0.18);
+     padding: 10px;
+    width: 98%;
+          }
+          
+.celdas{
+    display: flex;
 		width: 10rem;
 		height: 10rem;
 		margin: 0.25rem;
@@ -55,33 +69,11 @@ ul {
 		box-shadow: 0 8px 32px 0 rgba(95, 104, 236, 0.37);
 		border-radius: 10px;
 		border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-
-	dias {
-		font-size: 2rem;
-		margin: 0 0 1rem 0;
+		font-size: 30px;
 		font-weight: 500;
-		}
-    .footer{
-     text-align: center;
-     height: 100px;
-	 background: rgba(57, 39, 255, 0.25);
-	 box-shadow: 0 8px 32px 0 rgba(31, 39, 143, 0.37);
-	 border-radius: 10px;
-	 border: 1px solid rgba(78, 48, 229, 0.18);
-     padding: 10px;
-    width: 98%;
-          }
-          
-
-.ejemplo{
-    width: 126px;
-    height: 190px;
-    margin-block: 10px;
-    margin-inline: 15px;
-    padding: 16px;
-    border: 1px solid #000;
+		
 }
+
 .orden{
     display: flex;
     flex-direction: row;
