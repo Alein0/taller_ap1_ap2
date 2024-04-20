@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/ap2.css">
     <title>Calendario Eventos</title>
 </head>
+
 <body>
 
     <header>
-    <h1>Calendario de Eventos</h1>
+        <h1>Calendario de Eventos</h1>
     </header>
     <form id="idcalen" name="calen">
         <label>Mes:</label>
 
-            <select name="mess" id="mes">
-                <option>------</option>
-                <option value="1">Enero</option>
-                <option value="2">Febrero</option>
-                <option value="3">Marzo</option>
-                <option value="4">Abril</option>
-                <option value="5">Mayo</option>
-                <option value="6">Junio</option>
-                <option value="7">Julio</option>
-                <option value="8">Agosto</option>
-                <option value="9">Septiembre</option>
-                <option value="10">Octubre</option>
-                <option value="11">Noviembre</option>
-                <option value="12">Diciembre</option>
-            </select>
-<<<<<<< HEAD
+        <select name="mess" id="mes">
+            <option>------</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
 
-                <label>Evento: </label><input type="text" name="evento" placeholder="Ingrese un evento" required></input> 
-                <label>Dia: </label><input type="number" name="dia" placeholder="Eliga el dia" required></input> 
-                <br>
-                <input class="estiloboton" type="submit" value="Guardar">
-                <input class="estiloboton"  type=button value="Editar">
-                <button class="estiloboton" >Borrar</button>
-        
-=======
-            <div>
-                <label>Evento: </label><input type="text" name="evento" id="eventoid" placeholder="Ingrese un evento" required></input> 
-                <br>
-                <label>Dia: </label><input type="number" name="dia" id="diaid" placeholder="Elija el dia" required></input> 
-                <br>
-                <input type="submit" value="Guardar">
-            </div>
->>>>>>> 2cdb3c3c5c8c09e36108aab63c06c9957ef6cd91
+
+        <label>Evento: </label><input type="text" id="event" name="evento" placeholder="Ingrese un evento"
+            required></input>
+        <label>Dia: </label><input id="diaid" type="number" min="1" max="31" name="dia" placeholder="Eliga el dia"
+            required></input>
+        <br><br>
+        <div class="botones">
+            <input class="estiloboton" type="submit" value="Guardar">
+            <input class="estiloboton" type=button value="Editar">
+            <input class="estiloboton" type=button value="Borrar">
+        </div>
+
+
     </form>
     <h1 id="nomMes"></h1>
     <section id="resultados" class="orden"></section>
     <h2 id="fecha"></h2>
-<br>
-<br>
+    <br>
+    <br>
 </body>
-<footer class="footer" >
+<footer class="footer">
     fin pagin
 </footer>
 <script src="JS/ap2.js"></script>
+
 </html>

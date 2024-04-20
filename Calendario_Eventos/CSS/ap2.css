@@ -4,10 +4,11 @@
     font-family: cursive, 'Courier New', Courier, monospace;
 	
 }
-.estiloboton {
+.estiloboton { 
+    font-family: cursive, 'Courier New', Courier, monospace;}
 
-	
-	font-family: "Poppins", serif;
+.botones{
+	margin-left: 40%;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 		#7787fb 100%
 	);
 }
+
 .margen{
     margin-left: 400px;
     margin-right: 400px;

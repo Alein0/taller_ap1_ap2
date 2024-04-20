@@ -22,7 +22,7 @@ header{
     margin: 2%;
 }
 table tr th{
-    border: 1px solid #c5cdcd;
+    border: 1px solid rgb(78, 131, 154);
    background-color: #06b8dc;
    width: 160px;
    height: 30px;

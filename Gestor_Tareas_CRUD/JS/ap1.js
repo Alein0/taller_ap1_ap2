@@ -14,6 +14,7 @@ function Leer() {
     newData["info"] = document.getElementById("info").value
     return newData
 }
+
 function InsertarDatos(data) {
     let table = document.getElementById("tabla").getElementsByTagName('tbody')[0]
     const num = table.getElementsByTagName('tr').length
@@ -26,16 +27,19 @@ function InsertarDatos(data) {
     document.getElementById("titulo")
     Vaciar()
 }
+
 function Vaciar() {
     document.getElementById("titulo").value = ""
     document.getElementById("info").value = ""
     Fila = null
 }
+
 function Edit(td) {
     Fila = td.parentElement.parentElement
     document.getElementById("titulo").value = Fila.cells[0].innerHTML
     document.getElementById("info").value = Fila.cells[1].innerHTML
 }
+
 function Actualizar(newData) {
     Fila.cells[0].innerHTML = newData.titulo
     Fila.cells[1].innerHTML = newData.info

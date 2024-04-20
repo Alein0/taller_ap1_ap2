@@ -1,6 +1,11 @@
+const eventos = [];
+
+eventos.filter(item=>item.mes==mesSeleccionado)
+
 document.getElementById('mes').addEventListener('change', (event) => {
     console.log(event.target.value);
     generarDias(event.target.value);
+    // cargarEventos();
 });
 
 function generarDias(mes) {
@@ -12,7 +17,7 @@ function generarDias(mes) {
 
     console.log(dias);
     document.getElementById('resultados').innerHTML = dias.map((value) => {
-      return '<div class="celdas">' + value + '</div>';
+        return '<div class="celdas">' + value + '</div>';
     }).join(" ");
 }
 
@@ -22,7 +27,7 @@ function Leer() {
     newData["dia"] = document.getElementById("diaid").value
     document.getElementById('mes').addEventListener('change', (event) => {
         newData["mes"] = event.target.value
- });
+    });
     return newData
 }
 
@@ -45,15 +50,26 @@ function agregar(data, mes){
 }
 */
 
+
+
+
 document.getElementById('idcalen').addEventListener('submit', (event) => {
     event.preventDefault();
     const btnEditBor = '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
     const form = document.forms['calen'];
     const dia = parseInt(form['dia'].value);
     const evento = form['evento'].value;
-    const mostrar = document.getElementsByClassName('ejemplo');
+    const mostrar = document.getElementsByClassName('celdas');
+    // this.eventos.push({
+    //     mes: 1,
+    //     dia: parseInt(form['dia'].value),
+    //     const: form['evento'].value
+    // })
     console.log(mostrar, dia)
-    mostrar[dia-1].innerHTML += '<div>'+evento+'<br>'+btnEditBor+'</div>';
+    // localStorage.setItem('enento',{});
+
+    // localStorage.getItem('enento')
+    mostrar[dia - 1].innerHTML += '<div>' + evento + '<br>' + btnEditBor + '</div>';
 });
 
 function Edit(btn) {
@@ -68,32 +84,43 @@ function Borr(btn) {
     }
 }
 
+
+document.getElementById('idcalen').addEventListener('submit', (event) => {
+    event.preventDefault();
+    let newData = {}
+    const form = document.forms['calen'];
+    newData["evento"] = form['evento'].value
+    newData["dia"] = form['diaid'].value
+    newData["mes"] = form['mes'].value
+    console.log(newData.evento, newData.dia, newData.mes);
+});
+
 document.getElementById('mes').addEventListener('change', (event) => {
-    if(event.target.value == 1){
+    if (event.target.value == 1) {
         nom = 'Enero'
-    }if(event.target.value == 2){
+    } if (event.target.value == 2) {
         nom = 'Febrero'
-    }if(event.target.value == 3){
+    } if (event.target.value == 3) {
         nom = 'Marzo'
-    }if(event.target.value == 4){
+    } if (event.target.value == 4) {
         nom = 'Abril'
-    }if(event.target.value == 5){
+    } if (event.target.value == 5) {
         nom = 'Mayo'
-    }if(event.target.value == 6){
+    } if (event.target.value == 6) {
         nom = 'Junio'
-    }if(event.target.value == 7){
+    } if (event.target.value == 7) {
         nom = 'Julio'
-    }if(event.target.value == 8){
+    } if (event.target.value == 8) {
         nom = 'Agosto'
-    }if(event.target.value == 8){
+    } if (event.target.value == 9) {
         nom = 'Septiembre'
-    }if(event.target.value == 9){
+    } if (event.target.value == 10) {
         nom = 'Octubre'
-    }if(event.target.value == 10){
+    } if (event.target.value == 11) {
         nom = 'Noviembre'
-    }if(event.target.value == 11){
+    } if (event.target.value == 12) {
         nom = 'Diciembre'
     }
     const nombreMes = document.getElementById('nomMes');
-        nombreMes.innerHTML = nom;
+    nombreMes.innerHTML = nom;
 });
