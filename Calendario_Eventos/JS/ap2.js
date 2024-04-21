@@ -1,12 +1,25 @@
-const eventos = [];
+const Enero = [];
+const Febrero = [];
+const Marzo = [];
+const Abril = [];
+const Mayo = [];
+const Junio = [];
+const Julio = [];
+const Agosto = [];
+const Septiembre = [];
+const Octubre = [];
+const Noviembre = [];
+const Diciembre = [];
 
 document.getElementById('mes').addEventListener('change', (event) => {
     console.log(event.target.value);
     generarDias(event.target.value);
-    const meSelect = eventos.filter(item=>item.mes==event.target.value)
-    if(meSelect==event.target.value){
-    cargarEventos();
-    }
+    //const meSelect = eventos.filter(item=>item.mes==event.target.value)
+    //console.log(meSelect)
+    guardarEventos(event.target.value);
+    //if(meSelect==event.target.value){
+    cargarEventos(event.target.value);
+    //}
 });
 
 function generarDias(mes) {
@@ -52,35 +65,146 @@ function agregar(data, mes){
 }
 */
 
-function cargarEventos(diaForm, eventoForm, btnEditBor){
-    const mostrar = document.getElementsByClassName('celdas');
-    const dia = eventos.filter(item=>item.dia==diaForm)
-    const evento = eventos.filter(item=>item.evento==eventoForm)
-    
-    mostrar[dia-1] += '<div>' + evento + '<br>' + btnEditBor + '</div>';
+function cargarEventos(meSelect){
+    const mostrar = document.getElementsByClassName('celdas');    
+    if(meSelect==1){
+        Enero.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==2){
+        Febrero.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==3){
+        Marzo.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==4){
+        Abril.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==5){
+        Mayo.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==6){
+        Junio.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==7){
+        Julio.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==8){
+        Agosto.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==9){
+        Septiembre.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==10){
+        Octubre.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==11){
+        Noviembre.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }if(meSelect==12){
+        Diciembre.forEach(evento => {
+            mostrar[evento.dia - 1].innerHTML += '<div>' + evento.evento + '<br>' + evento.btnEditBor + '</div>';
+        });
+    }
+//    mostrar[dia-1].innerHTML += '<div>' + evento + '<br>' + btnEditBor + '</div>';
     console.log(mostrar);
 }
 
+function guardarEventos(selectmes){
 document.getElementById('idcalen').addEventListener('submit', (event) => {
+    const eventos = [];
+
     event.preventDefault();
     const form = document.forms['calen'];
-    const diaForm = parseInt(form['dia'].value);
-    const eventoForm = form['evento'].value;
-    const btnEditBorForm = '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>';
 
-    eventos.push({
-    mes: parseInt(form['mess'].value),
-    dia: parseInt(form['dia'].value),
-    btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>',
-    evento: form['evento'].value
-    });
-    cargarEventos(diaForm, eventoForm, btnEditBorForm);
+    if(selectmes==1){
+        Enero.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==2){
+        Febrero.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==3){
+        Marzo.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==4){
+        Abril.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==5){
+        Mayo.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==6){
+        Junio.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==7){
+        Julio.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==8){
+        Agosto.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==9){
+        Septiembre.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==10){
+        Octubre.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==11){
+        Noviembre.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }if(selectmes==12){
+        Diciembre.push({
+            dia: parseInt(form['dia'].value),
+            evento: form['evento'].value,
+            btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
+        });
+    }
 });
-console.log(eventos);
-
+console.log(Enero);
+}
     // localStorage.setItem('enento',{});
     // localStorage.getItem('enento')
-
 
 function Edit(btn) {
     Fila = btn.parentElement.parentElement
