@@ -1,11 +1,12 @@
 const eventos = [];
 
-eventos.filter(item=>item.mes==mesSeleccionado)
-
 document.getElementById('mes').addEventListener('change', (event) => {
     console.log(event.target.value);
     generarDias(event.target.value);
-    // cargarEventos();
+    const meSelect = eventos.filter(item=>item.mes==event.target.value)
+    if(meSelect==event.target.value){
+    cargarEventos();
+    }
 });
 
 function generarDias(mes) {
@@ -21,6 +22,7 @@ function generarDias(mes) {
     }).join(" ");
 }
 
+/*
 function Leer() {
     let newData = {}
     newData["evento"] = document.getElementById("eventoid").value
@@ -30,7 +32,7 @@ function Leer() {
     });
     return newData
 }
-
+*/
 /*
 function agregar(data, mes){
     document.getElementById('mes').addEventListener('change', (event) => {
@@ -50,27 +52,35 @@ function agregar(data, mes){
 }
 */
 
-
-
+function cargarEventos(diaForm, eventoForm, btnEditBor){
+    const mostrar = document.getElementsByClassName('celdas');
+    const dia = eventos.filter(item=>item.dia==diaForm)
+    const evento = eventos.filter(item=>item.evento==eventoForm)
+    
+    mostrar[dia-1] += '<div>' + evento + '<br>' + btnEditBor + '</div>';
+    console.log(mostrar);
+}
 
 document.getElementById('idcalen').addEventListener('submit', (event) => {
     event.preventDefault();
-    const btnEditBor = '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>'
     const form = document.forms['calen'];
-    const dia = parseInt(form['dia'].value);
-    const evento = form['evento'].value;
-    const mostrar = document.getElementsByClassName('celdas');
-    // this.eventos.push({
-    //     mes: 1,
-    //     dia: parseInt(form['dia'].value),
-    //     const: form['evento'].value
-    // })
-    console.log(mostrar, dia)
-    // localStorage.setItem('enento',{});
+    const diaForm = parseInt(form['dia'].value);
+    const eventoForm = form['evento'].value;
+    const btnEditBorForm = '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>';
 
-    // localStorage.getItem('enento')
-    mostrar[dia - 1].innerHTML += '<div>' + evento + '<br>' + btnEditBor + '</div>';
+    eventos.push({
+    mes: parseInt(form['mess'].value),
+    dia: parseInt(form['dia'].value),
+    btnEditBor: '<input type=button onClick="Edit(this)" value="Editar"><button onClick="Borr(this)">Borrar</button>',
+    evento: form['evento'].value
+    });
+    cargarEventos(diaForm, eventoForm, btnEditBorForm);
 });
+console.log(eventos);
+
+    // localStorage.setItem('enento',{});
+    // localStorage.getItem('enento')
+
 
 function Edit(btn) {
     Fila = btn.parentElement.parentElement
@@ -83,8 +93,7 @@ function Borr(btn) {
         document.getElementById("calen").delete(form['evento'].value)
     }
 }
-
-
+/*
 document.getElementById('idcalen').addEventListener('submit', (event) => {
     event.preventDefault();
     let newData = {}
@@ -94,6 +103,7 @@ document.getElementById('idcalen').addEventListener('submit', (event) => {
     newData["mes"] = form['mes'].value
     console.log(newData.evento, newData.dia, newData.mes);
 });
+*/
 
 document.getElementById('mes').addEventListener('change', (event) => {
     if (event.target.value == 1) {
