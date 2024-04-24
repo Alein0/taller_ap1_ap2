@@ -47,13 +47,15 @@ header{
 
     .footer{
      text-align: center;
-     height: 100px;
+     height:auto;
 	 background: rgba(57, 39, 255, 0.25);
 	 box-shadow: 0 8px 32px 0 rgba(31, 39, 143, 0.37);
 	 border-radius: 10px;
 	 border: 1px solid rgba(78, 48, 229, 0.18);
      padding: 10px;
-    width: 98%;
+    width: 98.5%;
+	bottom: -80%;
+	position: absolute;
           }
           
 .celdas{
@@ -71,8 +73,8 @@ header{
 		box-shadow: 0 8px 32px 0 rgba(95, 104, 236, 0.37);
 		border-radius: 10px;
 		border: 1px solid rgba(255, 255, 255, 0.18);
-		font-size: 30px;
-		font-weight: 500;
+		font-size: 18px;
+		font-weight: 500px;
 		overflow-y: auto;
 }
 
@@ -82,4 +84,15 @@ header{
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.alinearimg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.textboton-d {
+    display: inline-block;
+    vertical-align: middle;
+
 }
