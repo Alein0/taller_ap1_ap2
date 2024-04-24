@@ -14,7 +14,6 @@
     </header>
     <main class="main">
     <section>
-    <form onsubmit="event.preventDefault();enviar();" autocomplete="off">
     <div class="tab">
         <table class="tabla" id="tabla">
             <thead>
@@ -30,13 +29,12 @@
             </tbody>
         </table>
     </div>
-    
     </br>
+    <form id="idform" name="form" autocomplete="off">
     <div>
         <label for="titulo">Titulo:</label><input type="text" id="titulo" placeholder="Ingrese el titulo de la tarea" required></input> 
         <label for="info">Descripción:</label><textarea type="text" id="info" placeholder="Ingrese descripcion de la tarea" required></textarea>
     </div> 
-    
     <input type="submit" value="Añadir">
     </form>
 </main>

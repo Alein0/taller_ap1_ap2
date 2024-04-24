@@ -30,10 +30,13 @@ function cargarEventos(meSelect) {
         const eventoHTML = '<div>' + evento.evento + '<br>' + evento.btnEditBor 
         mostrar[evento.dia - 1].innerHTML += eventoHTML;
     });
+    console.log(eventos);
 }
 function eliminarEvento(eventoId) {
+    if (confirm('¿Esta seguro que desea borrar el evento?')) {
     eventos.splice(eventos.findIndex(evento => evento.id === eventoId), 1);
     cargarEventos(parseInt(document.getElementById('mes').value));
+    }
 }
 
 function editarEvento(eventoId) {
@@ -50,7 +53,7 @@ document.getElementById('idcalen').addEventListener('submit', (event) => {
     const form = document.forms['calen'];
     const mesSeleccionado = parseInt(document.getElementById('mes').value);
     
-    contadorEventos++; // Incrementar el contador de eventos único
+    contadorEventos++; // incrementar el contador de eventos único
 
     eventos.push({
         id: contadorEventos, // Identificador único para el evento
@@ -67,5 +70,9 @@ document.getElementById('mes').addEventListener('change', (event) => {
     const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     const selectmes = parseInt(event.target.value);
     const nombreMes = document.getElementById('nomMes');
-    nombreMes.innerHTML = meses[selectmes - 1];
+    if(selectmes){
+        nombreMes.innerHTML = meses[selectmes - 1];
+    }else{
+        nombreMes.innerHTML = 'Seleccione un mes';
+    }
 });
