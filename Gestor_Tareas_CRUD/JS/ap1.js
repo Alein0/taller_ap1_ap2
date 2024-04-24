@@ -55,4 +55,5 @@ function Borr(td) {
 function Estado(index){
         const marca = document.getElementById("marca"+index)
         marca.innerHTML = 'Completado';
+        marca.classList.add('colorBoton'); 
 }
