@@ -8,6 +8,12 @@ function enviar() {
             Vaciar()
     }
 }
+
+document.getElementById('idform').addEventListener('submit', (event) => {
+    event.preventDefault()
+    enviar();
+});
+
 function Leer() {
     let newData = {}
     newData["titulo"] = document.getElementById("titulo").value

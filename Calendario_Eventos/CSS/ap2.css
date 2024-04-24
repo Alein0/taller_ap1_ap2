@@ -5,7 +5,8 @@
 	
 }
 .estiloboton { 
-    font-family: cursive, 'Courier New', Courier, monospace;}
+    font-family: cursive, 'Courier New', Courier, monospace;
+}
 
 .botones{
 	margin-left: 40%;
@@ -34,7 +35,6 @@ h1 {
 }
 header{
     width: 98%;
-
     padding: 12px;
     text-align: center;
 	background: rgba(57, 39, 255, 0.25);
@@ -43,7 +43,6 @@ header{
 	 border: 1px solid rgba(78, 48, 229, 0.18);
     font-size:25px;
 }
-
 
     .footer{
      text-align: center;
